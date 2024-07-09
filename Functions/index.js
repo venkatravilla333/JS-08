@@ -86,6 +86,92 @@
 // console.log(vary(1,2,3,4,5))
 
 
+//scope
+
+//storage in global
+
+// var a = 1
+// let b = 2
+// const c = 3
+
+//access in global
+
+// console.log(a)
+// console.log(b)
+// console.log(c)
+
+function test() {
+
+    //storage in function
+
+    
+    // a = 100
+    // console.log(a)
+
+    // var d = 4
+    // let e = 5
+    // const f = 6
+
+    // access in function which are stored in global
+    // console.log(a)
+    // console.log(b)
+    // console.log(c)
+    // access in function which are stored in funtion
+    // console.log(d)
+    // console.log(e)
+    // console.log(f)
+
+    // if (true) {
+
+        //storage in block
+
+        // var g = 7
+        // let h = 8
+        // const i = 9
+        
+        // access in block which are stored in global
+        // console.log(a)
+        // console.log(b)
+        // console.log(c)
+        // access in block which are stored in function
+        // console.log(d)
+        // console.log(e)
+        // console.log(f)
+        // access in block which are stored in block
+        // console.log(g)
+        // console.log(h)
+        // console.log(i)
+    }
+    // access in funtion which are stored in block
+    // console.log(g)
+    // console.log(h)
+    // console.log(i)
+    
+// }
+
+// access in global which are stored in function
+// console.log(d)
+// console.log(e)
+// console.log(f)
+
+// access in blobal which are stored in block
+// console.log(g)
+// console.log(h)
+// console.log(i)
+
+// test()
+
+//  a = 100
+// console.log(a)
+
+// console.log(a)
+// {
+    // console.log(a)
+    // let a = 100
+    // console.log(a)
+// }
+//  console.log(a)
+
 
 
 
