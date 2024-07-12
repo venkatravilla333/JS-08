@@ -173,5 +173,95 @@ function test() {
 //  console.log(a)
 
 
+//Hoisting
+
+//all variables
+// console.log(a)
+// const a = 'sachin'
+
+// console.log(b)
+// var b = 40
+
+// console.log(c)
+// var c = true
+
+// console.log(d)
+// var d
+
+// console.log(e)
+// var e = null
+
+// console.log(f)
+// var f = { name: 'kohli' }
+
+// console.log(g)
+// var g = [1, 2, 3]
+
+// // console.log(h)
+// h()
+// var h = function test() {
+    
+//     console.log('named fun exp')
+// }
+
+// console.log(i)
+// var i = function () {
+//     console.log('anonymous fun exp')
+// }
+
+// console.log(j)
+// var j = () => {
+//     console.log('arrow fun exp')
+// }
+
+// //function declaration
+// declare()
+// function declare() {
+//     console.log('declare')
+// }
+
+//closure
+
+// function outer() {
+//     var x = 100
+    
+//    return function inner() {
+//         console.log(x)
+//     }
+// }
+
+// var inner = outer()
+// inner()
+
+//var vs let vs const
+
+//scope
+
+//hoisting
+
+//re-declaration
+
+// var x = 10
+// console.log(x)
+
+// let x = 20
+// console.log(x)
+
+
+//re-assignment
+
+// const x = 10
+// console.log(x)
+// x = 20
+// console.log(x)
+
+//initialization
+
+const x = 10
+
+
+
+
+
 
 
