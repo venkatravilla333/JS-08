@@ -428,5 +428,78 @@ both let and const declarations are hoisted in JavaScript. However, unlike var, 
 9) Closure:
 
   =>Closure is a concept in js, it allows to inner function to access outer scope variables even after the outer function execution content is over.
+
+
+  18) Miscellaneous topics (related to functions)
+========================
+
+
+1) IIFE (Immediately Invocable Function Expression) (ES-5)
+-------
+
+    =>An IIFE is a way to excute functions immediately as soon as they are created.
+    =>The most usecase of an IIFE is to restrict the scope of variables to local so
+      that they don't pollute the global context(scope).
+    =>It helps in making our variables and methods private.
+    =>Any function or variable defined inside IIFE can not be accessed outside of
+      the IIFE block, thus preventing global scope from getting polluted.
+    =>It's often used to create private variables and functions.
+ 
+2) Function currying?
+--------------------
+
+  =>Function currying is a technique of trasforming (converting) a function with 
+    multiple parameters into multiple functions with single parameter.
+  =>It helps to avoid passing same value again and again.
+
+
+3) first class function?
+------------------------
+
+  =>A programming language is said to have First-class functions when functions in that language are treated like any other variable. 
+  =>For example, in such language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable.
+
+
+4) heigher order function?
+--------------------------
+  
+  =>A function that receives another function as an argument or that returns a new function or both is called Higher-order function. Higher-order functions are only possible because of the First-class functions.
+
+
+5) pure function? 
+-----------------
+
+   =>Pure function always returns the same result if the same arguments are passed in. 
+   =>It does not depend on any state, or data, change during a program's execution. 
+     It must only depend on its input arguments. 
+   =>They do not have any side effects like network or database calls and do not modify the arguments which are passed to them.
+   =>We can predict the output from pure function.
+
+   
+6) impure function?
+-------------------
+
+  =>Any function that changes the internal state of one of its arguments or the value of some external variable is an impure function. 
+  =>They may have any side effects like network or database calls and it may modify the arguments which are passed to them.
+  =>We can not predict output from impure function.
+
+
+7) Recursion function:
+---------------------
+
+ - A function that calls itself is recursion. Recursion in JavaScript is a recursive call of the function to itself, where the function calls itself, again and again, (recursively) until given condition becomes false.
+
+calculate factorial:
+
+function factorial(n) {
+  if (n <= 0) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
+}
+
+let result = factorial(5);
+console.log(result);
   
 
