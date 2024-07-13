@@ -438,11 +438,9 @@ both let and const declarations are hoisted in JavaScript. However, unlike var, 
 -------
 
     =>An IIFE is a way to excute functions immediately as soon as they are created.
-    =>The most usecase of an IIFE is to restrict the scope of variables to local so
-      that they don't pollute the global context(scope).
+    =>The most usecase of an IIFE is to restrict the scope of variables to local so that they don't pollute the global context(scope).
     =>It helps in making our variables and methods private.
-    =>Any function or variable defined inside IIFE can not be accessed outside of
-      the IIFE block, thus preventing global scope from getting polluted.
+    =>Any function or variable defined inside IIFE can not be accessed outside of the IIFE block, thus preventing global scope from getting polluted.
     =>It's often used to create private variables and functions.
  
 2) Function currying?
@@ -503,3 +501,7 @@ let result = factorial(5);
 console.log(result);
   
 
+call back function
+------------------
+- A JavaScript callback is a function which is to be executed after another function has finished execution. 
+- A more formal definition would be - Any function that is passed as an argument to another function so that it can be executed in that other function is called as a callback function.   
