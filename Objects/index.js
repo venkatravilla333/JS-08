@@ -109,17 +109,17 @@
 //How to iterate or loop object
 
 
-var obj = {
-  name: 'sachin',
-  age: 40,
-  color: 'white',
-  height: '5 feet',
-  play: ()=>{
-  console.log('play')
-  }
-}
+// var obj = {
+//   name: 'sachin',
+//   age: 40,
+//   color: 'white',
+//   height: '5 feet',
+//   play: ()=>{
+//   console.log('play')
+//   }
+// }
 
-console.log(obj)
+// console.log(obj)
 // without loop
 
 // console.log(obj.name)
@@ -157,6 +157,45 @@ console.log(obj)
 //     console.log(val)
 //   }
 // }
+
+
+//How to copy primitives and reference
+
+//primitives
+
+// var x = 10
+
+// var y = x
+// console.log(x)
+// console.log(y)
+// y = 20
+// console.log(x)
+// console.log(y)
+
+//objects
+
+var originalObj = {
+  name: 'sachin',
+  address: { road: 101 },
+  play: () => {  }
+}
+
+// import lodash from 'lodash'
+// var lodash = require('lodash')
+
+// var copiedObj = originalObj // normal copy
+// var copiedObj = JSON.parse(JSON.stringify(originalObj)) // deep copy 
+// var copiedObj = lodash.cloneDeep(originalObj) // deep copy 
+var copiedObj = Object.assign({}, originalObj) // shallow copy
+// var copiedObj = {...originalObj} // shallow copy(ES-6)
+
+copiedObj.name = 'kohli'
+copiedObj.address.road = 201
+
+console.log(originalObj)
+console.log(copiedObj)
+
+
 
 
 

@@ -760,3 +760,59 @@ The repeat() method returns a string with a number of copies of a string.
 The repeat() method returns a new string.
 
 The repeat() method does not change the original string.
+
+9) Objects
+==========
+
+1) What is an object?
+
+ - In JavaScript, an object is a reference data type that stores a collection of related data and functionality. 
+ - It is a container for key-value pairs, where each key is a unique identifier and each value can be of any data type, including other objects, arrays, functions, primitives (such as numbers, strings, and booleans)
+ - Objects in JavaScript are often used to model real-world entities such as a person, car, or any other entity that has properties and behaviors.
+ - JavaScript also has some built-in objects like Array, Date, Math. These built-in objects provide specialized functionality for specific use cases.
+ - You can access the properties and methods of an object using dot notation or bracket notation.
+
+2) How to create object:
+
+ 1) Object literal way
+ 3) Factory function
+ 4) Constructor function
+ 5) Classical way (ES-6)
+
+3) Objects are dynamic:
+
+ You can add, modify, or delete properties and methods of an object at runtime, making objects dynamic and flexible in JavaScript.
+
+ -add
+ -update
+ -delete
+
+4) Iterating object:
+
+  - for in loop 
+
+  - Object.keys/ Object.entries /Object.values
+
+    Object.keys => This method will create array with looped keys in object.
+    Object.values => This method will create array with looped values in object.
+    Object.entries => This method will create array with looped keys and values in object.
+
+5) Copy primitives and reference types:
+
+   =>primitives copy
+     --------------- 
+
+      By default deep copy
+
+   =>Object copy
+     -----------
+ 
+      normal copy => = (assignment operator)
+
+      swallow copy => Object.assign({}, source object) or spreed operator.
+
+      deep copy => JSON.parse(JSON.stringfy(obj)) 
+                   (it will copy only pimitives and obj, it will ignore method copy)
+
+                   cloneDeep() => lodash
+                   (it will copy all pimitives and obj and method copy)
