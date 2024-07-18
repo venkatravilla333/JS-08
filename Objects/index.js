@@ -174,27 +174,81 @@
 
 //objects
 
-var originalObj = {
-  name: 'sachin',
-  address: { road: 101 },
-  play: () => {  }
-}
+// var originalObj = {
+//   name: 'sachin',
+//   address: { road: 101 },
+//   play: () => {  }
+// }
 
 // import lodash from 'lodash'
 // var lodash = require('lodash')
 
 // var copiedObj = originalObj // normal copy
-// var copiedObj = JSON.parse(JSON.stringify(originalObj)) // deep copy 
-// var copiedObj = lodash.cloneDeep(originalObj) // deep copy 
-var copiedObj = Object.assign({}, originalObj) // shallow copy
+// var copiedObj = JSON.parse(JSON.stringify(originalObj)) // deep copy
+// var copiedObj = lodash.cloneDeep(originalObj) // deep copy
+// var copiedObj = Object.assign({}, originalObj) // shallow copy
 // var copiedObj = {...originalObj} // shallow copy(ES-6)
 
-copiedObj.name = 'kohli'
-copiedObj.address.road = 201
+// copiedObj.name = 'kohli'
+// copiedObj.address.road = 201
 
-console.log(originalObj)
-console.log(copiedObj)
+// console.log(originalObj)
+// console.log(copiedObj)
 
+//Math
+
+// console.log(Math)
+// console.log(Math.min(10, 4, 20))
+// console.log(Math.max(10, 4, 20))
+// console.log(Math.floor(10.9))
+// console.log(Math.ceil(10.1))
+// console.log(Math.round(10.1))
+// console.log(Math.round(10.5))
+// console.log(Math.random()*100)
+// console.log(Math.sqrt(9))
+// console.log(Math.pow(2,10))
+
+
+//Date object
+
+// var now = new Date()
+// console.log(now)
+// var date1 = new Date('1947 8 15 10:30:40')
+// var date2 = new Date(2050, 10, 20, 10, 30, 40 )
+// console.log(date2)
+// console.log(date1.getFullYear())
+// date1.setFullYear(2020)
+// console.log(date1)
+
+// get
+
+
+// console.log(now.getFullYear())
+// console.log(now.getDate())
+// console.log(now.getMonth())
+// console.log(now.getDay())
+// console.log(now.getHours())
+// console.log(now.getMinutes())
+// console.log(now.getSeconds())
+
+//set
+
+// now.setFullYear(2047)
+// now.setMonth(10)
+// now.setHours(8)
+// console.log(now)
+// console.log(now.getFullYear())
+// console.log(now.getMonth())
+
+//Before template srting
+var name = 'sachin'
+var age = 40
+
+console.log('Hi this is ' + '' + name + '' + ' my age is ' +  age)
+
+//After template srting
+
+console.log(`Hi this is ${name} my age is ${age}`)
 
 
 
