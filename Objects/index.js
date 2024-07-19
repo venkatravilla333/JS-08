@@ -241,14 +241,117 @@
 // console.log(now.getMonth())
 
 //Before template srting
-var name = 'sachin'
-var age = 40
+// var name = 'sachin'
+// var age = 40
 
-console.log('Hi this is ' + '' + name + '' + ' my age is ' +  age)
+// console.log('Hi this is ' + '' + name + '' + ' my age is ' +  age)
 
 //After template srting
 
-console.log(`Hi this is ${name} my age is ${age}`)
+// console.log(`Hi this is ${name} my age is ${age}`)
+
+
+//String object
+
+var msg = 'Hi how are you'
+
+// console.log(msg)
+
+//How to find string length
+
+// var length = msg.length
+// console.log(length)
+
+//how to remove (trim) white spaces in string
+
+// var trimedMsg = msg.trim()
+// var trimedMsg = msg.trimStart()
+// var trimedMsg = msg.trimEnd()
+// console.log(trimedMsg.length)
+
+//How to extract / copy a part of string
+
+// var copiedMsg = msg.slice()
+// var copiedMsg = msg.slice(0)
+// var copiedMsg = msg.slice(0, msg.length)
+// var copiedMsg = msg.slice(0, 2)
+// var copiedMsg = msg.slice(3, 6)
+// var copiedMsg = msg.slice(-3)
+// var copiedMsg = msg.slice(-6)
+// var copiedMsg = msg.substring()
+// var copiedMsg = msg.substring(0)
+// var copiedMsg = msg.substring(0, msg.length)
+// var copiedMsg = msg.substring(0, 2)
+// var copiedMsg = msg.substring(-3)
+// var copiedMsg = msg.substr(0, 2)
+// var copiedMsg = msg.substr(-3)
+// console.log(copiedMsg)
+
+//How to extract a string character
+
+// var copiedMsg = msg.charAt(0)
+// var copiedMsg = msg.charCodeAt(0)
+// var copiedMsg = msg.charCodeAt(3)
+// console.log(copiedMsg)
+
+//case conversion
+
+// var msgCase = msg.toUpperCase()
+// var msgCase = msg.toLowerCase()
+// console.log(msgCase)
+
+//how to replace string
+
+// var replacedMsg = msg.replace('you', 'me')
+// var replacedMsg = msg.replace('You', 'me')
+// console.log(replacedMsg)
+
+//How add new string to end of string
+
+// var newStr = msg.concat(` sachin`)
+// console.log(newStr)
+
+//how pad new content at start and end
+
+// var mystr = 'hello'
+
+// var newStr = mystr.padStart(10, 5)
+// var newStr = mystr.padEnd(10, 5)
+// var newStr = mystr.padStart(10, 20)
+// console.log(newStr)
+
+//How to convert string into array
+
+var msg = 'hello where are you hello'
+
+// var arr = msg.split()
+// var arr = msg.split('')
+// var arr = msg.split(' ')
+
+// console.log(arr)
+
+// how to find specific string
+
+// console.log(msg.indexOf('hello'))
+// console.log(msg.indexOf('bye'))
+// console.log(msg.lastIndexOf('hello'))
+// console.log(msg.lastIndexOf('bye'))
+// console.log(msg.lastIndexOf('Hello'))
+// console.log(msg.includes('you'))
+// console.log(msg.includes('me'))
+// console.log(msg.startsWith('hello'))
+// console.log(msg.startsWith('hi'))
+// console.log(msg.endsWith('hello'))
+// console.log(msg.endsWith('hi'))
+
+//how to repeat string no of times
+
+
+// var msg = 'sachin'
+
+// console.log(msg.repeat(10))
+
+
 
 
 
