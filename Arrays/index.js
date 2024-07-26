@@ -60,6 +60,21 @@
 // console.log(arr)
 // console.log(arr2)
 
+//How to loop array items
+
+// var arr = [1,2,3,4,5]
+
+// for (var value of arr) {
+//   console.log(value)
+// }
+// for (var keys in arr) {
+//   console.log(keys, arr[keys])
+// }
+
+// arr.forEach((value, index) => {
+//   console.log(value, index)
+// })
+
 //how to merge
 
 // var arr1 = [1, 2, 3, 4, 5]
@@ -119,3 +134,47 @@
 // console.log(originalArr)
 // console.log(copiedArr)
 
+
+// var arr = [1, 2, -3, 4, 5, 0, -2, ]
+
+// console.log(arr)
+
+//filter
+
+// var filteredResult = arr.filter((item) => {
+//   return item > 0
+// })
+
+// console.log(filteredResult)
+
+//testing of array items
+
+// some
+
+// console.log(arr.some((item) => {
+//  return  item > 0
+// }))
+
+
+//every
+
+// console.log(arr.every((item) => {
+//  return  item > 0
+// }))
+
+//map
+
+// var mapResult = arr.map((item) => {
+//   return item*100
+// })
+// console.log(mapResult)
+
+
+//forEach
+
+// var forEachRes = arr.forEach((v, i) => {
+//   // console.log(v, i)
+//   return 100
+// })
+
+// console.log(forEachRes)
