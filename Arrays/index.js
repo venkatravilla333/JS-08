@@ -178,3 +178,56 @@
 // })
 
 // console.log(forEachRes)
+
+// var arr = [1, 2, 3, 4, 5]
+
+// console.log(arr)
+// console.log(typeof arr[0])
+
+// var joinRes = arr.join(',')
+
+// console.log(joinRes)
+// console.log(typeof joinRes)
+
+// var splitRes = joinRes.split('')
+// console.log(splitRes)
+// console.log(typeof splitRes[0])
+// // console.log(Array.isArray(splitRes))
+
+
+// var arr = [1, 2, 3, 4, 5]
+
+// var reduceRes = arr.reduce((cum, cur) => {
+//   console.log(cum, cur)
+//   return cum*cur
+// }, 0)
+
+// console.log(reduceRes)
+
+//How to remove duplicate items in array
+
+
+// set with spread operator
+
+// var uniqueArr = [...new Set(arr)];
+
+// console.log(uniqueArr)
+var arr = [1, 2, 3, 2, 4, 6, 2, 3]
+console.log(arr)
+var uniqueArr = [ ]
+
+function uniqueFun(arr) {
+  console.log(arr)
+  for (var value of arr) {
+    console.log(value)
+    if (uniqueArr.indexOf(value) === -1) {
+      uniqueArr.push(value)
+    }
+  }
+}
+uniqueFun(arr)
+
+console.log(uniqueArr)
+
+
+
