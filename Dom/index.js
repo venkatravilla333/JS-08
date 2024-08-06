@@ -136,22 +136,56 @@
 
 //How to attach to DOM elements
 
-var btn = document.createElement('button')
+// var btn = document.createElement('button')
 
-btn.id = 'mybtn'
+// btn.id = 'mybtn'
 
-btn.textContent = 'Click'
+// btn.textContent = 'Click'
 
-var body = document.getElementById('body')
+// var body = document.getElementById('body')
 
-body.appendChild(btn)
+// body.appendChild(btn)
 
-function test() {
-  console.log('clicked')
+// function test() {
+//   console.log('clicked')
   
+// }
+
+// btn.addEventListener('click', test)
+
+//event handling in js
+
+// evant bubling & capturing & delegation
+
+var parent = document.getElementById('parent')
+var child = document.getElementById('child')
+var subchild = document.getElementById('subchild')
+
+
+var parentFun = (e) => {
+  console.log('parent')
 }
 
-btn.addEventListener('click', test)
+parent.addEventListener('click', parentFun, false)
+
+var childFun = (e) => {
+  console.log('child')
+  e.stopPropagation()
+}
+
+child.addEventListener('click', childFun, false)
+
+var subchildFun = (e) => {
+  console.log('sub child')
+  console.log(e)
+  console.log(e.clientX)
+  console.log(e.clientY)
+  console.log(e.offsetX)
+  console.log(e.offsetY)
+  console.log(e.target)
+}
+
+subchild.addEventListener('click', subchildFun, false)
 
 
 

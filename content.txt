@@ -1465,3 +1465,37 @@ The repeat() method does not change the original string.
     - false: Bubling phase
 
     - true: Capturing phase
+
+    8) Events handling in JS.
+   
+
+   1) Event bubling:
+   -----------------
+  
+   - Event bubbling means propagation of an event is done from child element to ancestor elements in the DOM. 
+   - When an event happens on an element, event first runs the handlers on it, then on its parent, then all the way up on other ancestors. Propagation path is bottom to top. 
+                 
+   2) Event capturing: 
+   -------------------
+
+   - Event capturing means propagation of event is done from ancestor elements to child element in the DOM. Propagation path is top to bottom.
+                   
+   3) Event deligation: 
+   --------------------
+ 
+   - Event delegation in JavaScript is a pattern that efficiently handles events. 
+   - Events can be added to a parent element instead of adding to every single element. 
+   - It refers to the process of using event propagation to handle events at 
+     a higher level in the DOM than the element on which the event originated. 
+   - when you click the td, the event bubbles up to the table which handles the event.
+
+    Why Event Delegation?
+    --------------------
+
+   - It is useful because the event can be listened to on multiple elements by using just one event handler. 
+   - It also uses less memory and gives better performance. 
+   - Apart from this,it also requires less time for setting up the event handler on element.
+
+
+
+
