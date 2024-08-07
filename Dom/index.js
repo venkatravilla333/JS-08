@@ -157,35 +157,47 @@
 
 // evant bubling & capturing & delegation
 
-var parent = document.getElementById('parent')
-var child = document.getElementById('child')
-var subchild = document.getElementById('subchild')
+// var parent = document.getElementById('parent')
+// var child = document.getElementById('child')
+// var subchild = document.getElementById('subchild')
 
 
-var parentFun = (e) => {
-  console.log('parent')
-}
+// var parentFun = (e) => {
+//   console.log('parent')
+// }
 
-parent.addEventListener('click', parentFun, false)
+// parent.addEventListener('click', parentFun, false)
 
-var childFun = (e) => {
-  console.log('child')
-  e.stopPropagation()
-}
+// var childFun = (e) => {
+//   console.log('child')
+//   e.stopPropagation()
+// }
 
-child.addEventListener('click', childFun, false)
+// child.addEventListener('click', childFun, false)
 
-var subchildFun = (e) => {
-  console.log('sub child')
-  console.log(e)
-  console.log(e.clientX)
-  console.log(e.clientY)
-  console.log(e.offsetX)
-  console.log(e.offsetY)
-  console.log(e.target)
-}
+// var subchildFun = (e) => {
+//   console.log('sub child')
+//   console.log(e)
+//   console.log(e.clientX)
+//   console.log(e.clientY)
+//   console.log(e.offsetX)
+//   console.log(e.offsetY)
+//   console.log(e.target)
+// }
 
-subchild.addEventListener('click', subchildFun, false)
+// subchild.addEventListener('click', subchildFun, false)
+
+
+//event delegation
+
+// var table = document.getElementById('table')
+
+// var tableClick = (e) => {
+//   console.log('clicked')
+//   console.log(e.target)
+// }
+
+// table.addEventListener('dblclick', tableClick)
 
 
 

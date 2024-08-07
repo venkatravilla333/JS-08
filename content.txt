@@ -1496,6 +1496,16 @@ The repeat() method does not change the original string.
    - It also uses less memory and gives better performance. 
    - Apart from this,it also requires less time for setting up the event handler on element.
 
+   9) How to improve JS app performance when we fire event in app:
+
+    
+   1) Normal event: It is about firing event every time.
+
+   2) Throttling event: Throtteling is about firing event after every certain time.
+
+   3) Debouncing event: Debouncing is about firing event after every certain time, provided in between there was no event firing.
+
+
 
 
 
