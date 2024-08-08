@@ -100,7 +100,7 @@
 // console.log(b)
 // console.log(c)
 
-function test() {
+// function test() {
 
     //storage in function
 
@@ -141,7 +141,7 @@ function test() {
         // console.log(g)
         // console.log(h)
         // console.log(i)
-    }
+    // }
     // access in funtion which are stored in block
     // console.log(g)
     // console.log(h)
@@ -386,6 +386,56 @@ function test() {
 // }
 
 // test(function cb(){})
+
+
+//This key word
+
+// console.log(this)
+
+// function test() {
+//     console.log(this)
+// }
+// test()
+
+// var mytest = () => {
+//     console.log(this)
+// }
+// mytest()
+
+// var obj = {
+//     name: 'sachin',
+//     play : ()=> {
+//         console.log(this)
+//     go = ()=> {
+//         console.log(this)
+//         }
+//         go()
+//     }
+//     // play: ()=> {
+//     //     console.log(this)
+//     // }
+// }
+// var go = obj.play()
+// go()
+
+
+function Hello() {
+    this.name = 'sachin';
+    this.play = function() {
+        console.log(this)
+       go = ()=> {
+            console.log(this)
+        }
+        go()
+    }
+    console.log(this)
+}
+
+var obj1 = new Hello()
+obj1.play()
+
+
+
 
 
 
