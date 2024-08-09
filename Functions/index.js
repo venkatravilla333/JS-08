@@ -419,20 +419,84 @@
 // go()
 
 
-function Hello() {
-    this.name = 'sachin';
-    this.play = function() {
+// function Hello() {
+//     this.name = 'sachin';
+//     this.play = function() {
+//         console.log(this)
+//        go = ()=> {
+//             console.log(this)
+//         }
+//         go()
+//     }
+//     console.log(this)
+// }
+
+// var obj1 = new Hello()
+// obj1.play()
+
+//ES-6
+
+// class Myclass{
+//     constructor(params) {
+//         this.name = 'sachin';
+//         this.myplay = ()=> {
+//             console.log(this)
+//            function go () {
+//                 console.log(this)
+//             }
+//             go()
+//         }
+//         console.log(this)
+//     }
+//     play() {
+//     console.log(this)
+// }
+// }
+
+//  new Myclass().myplay()
+// console.log(typeof Myclass)
+
+
+//Changing of this reference
+
+// var myobj = {
+//     name: 'sachin',
+//     age: 40,
+//     go: () => {
+        
+//     }
+// }
+
+// function test(a,b,c) {
+//     console.log(this)
+//     console.log(a, b, c)
+// }
+
+
+// test(100,200,300)
+
+// test.call(myobj, 10,20,30)
+// test.apply(myobj, [1, 2, 3])
+// test.bind(myobj, 11, 12, 13)()
+
+
+var person = {
+    name: 'sachin',
+    age: 40,
+    play: function () {
         console.log(this)
-       go = ()=> {
-            console.log(this)
+      return inner = ()=> {
+         console.log(this)
         }
-        go()
+        
     }
-    console.log(this)
 }
 
-var obj1 = new Hello()
-obj1.play()
+var inner = person.play()
+inner()
+// inner.call(person)
+// inner.apply(person)
+// inner.bind(person)()
 
 
 
