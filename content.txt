@@ -1690,6 +1690,405 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
   console.log(res);
 });
 
+13) iterators and generators
+ ===========================
+
+  - Iterator is a new concept introduced in ES-6. It's a kind of new mechanism to iterate or 
+    traverse through data structures. 
+  - Arrays, strings, Maps, Sets all these data collections are iterable.
+
+  Iterable:(object)
+  -------- 
+   An iterable is any object that impliments a method whose key is symbol.iterator 
+   and symbol.iterator method is going return an iterator object.
+
+  Iterator:(object) It returns by symbol.iterator()
+  --------
+  - What is an iterator? An iterator is an object that is going to impliment next method.
+  - This next method knows how to access elements in a collection , next method returns an object(IteratorResult object).
+  - That IteratorResult object contains two properties {value: any datatype, done: boolean}
+
+
+
+var iterable = [1, 2, 3, 4, 5];
+
+let iterator = iterable[Symbol.iterator]();
+console.log(iterator);
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterable.next());
+
+let person = {
+  fname: 'Hari',
+  lname: 'Ravilla',
+};
+
+person[Symbol.iterator] = function () {
+  var properties = Object.keys(person);
+  var count = 0;
+  var next = () => {
+    if (count >= properties.length) {
+     return {done: true: value: undefined}
+    }
+    return { done: false, value: this[properties[count++]] };
+  };
+  return { next };
+};
+
+for (var v of person) {
+  console.log(v);
+}
+
+
+
+
+  By default iterable data structures
+  -----------------------------------
+
+   -array
+   -Map
+   -Set
+   -String
+   -Generator object
+   -arguments object
+
+
+  By default not iterable data structures
+  ---------------------------------------
+
+   -object
+
+
+Generator:
+---------
+
+ -Generators can help you to pause & resume the code.
+ -It is a function which can return multiple values in phases.
+ -The function* is the keyword used to define a generator function.
+ -Yield is an operator which pauses the generator. 
+ -Yield itself is capable of returning any value.
+ -Genarators are iterable.
+ -Next () method returns an object, which has two keys.
+   1) value
+   2) boolean
+ -Generator function returns an itarator object.
+ -To excute generator function we have to call next() method.
+ -When you want to come out of generator function or terminate it you can write return()method, 
+  Writing yield inside finally will not allow the return() to terminate gen function. 
+
+Note: When a generator function is called, it does not call the function instead it returns a generator object.
+Note: next method will start the excution till the yield operator. Next method returns an object which has two keys {value: any datatype, done: true/false}
+
+
+
+
+14) ES-6 Modules
+================
+
+  - Consider a scenario where parts of JavaScript code need to be reused. ES6 comes to rescue with the concept of Modules.
+  - A module organizes a related set of JavaScript code. A module can contain variables and functions. 
+  - A module is nothing but a chunk of JavaScript code written in a file. 
+  - By default, variables and functions of a module are not available for use. 
+  - Variables and functions within a module should be exported so that they can be accessed (imported) from within other files. 
+
+   Named Exports
+   -------------
+   Named exports are distinguished by their names. There can be several named exports in a module. A module can export selected components using the syntax given below −
+
+Syntax 1
+--------
+
+-using multiple export keyword
+
+export component1
+export component2
+...
+...
+export componentN
+
+Syntax 2
+--------
+
+Alternatively, components in a module can also be exported using a single export keyword with {} binding syntax as shown below −
+
+-using single export keyword
+
+export {component1,component2,....,componentN}
+
+
+Default Exports
+---------------
+Modules that need to export only a single value can use default exports. There can be only one default export per module.
+
+Syntax
+------
+export default component_name
+
+However, a module can have one default export and multiple named exports at the same time.
+
+Importing Named Exports
+-----------------------
+
+While importing named exports, the names of the corresponding components must match.
+
+Syntax
+
+import {component1,component2..componentN} from module_name
+
+However, while importing named exports, they can be renamed using the as keyword. 
+
+import {original_component_name as new_component_name }
+
+
+Importing Default Exports
+-------------------------
+
+Unlike named exports, a default export can be imported with any name.
+
+Syntax
+------
+
+import any_variable_name from module_name
+
+Note: We have to do extra 2 tasks 1) type: "module" 2) add .js to file extension
+
+
+
+15) ES-6 Tooling
+================
+
+1) Babel
+   -----
+
+   => Babel is a transpiler for ES6 to ES5, so that browser can understand the JS.
+   => Babel can convert the advanced js and jsx into pure js, which is understand by browser.
+   => It allows web developers to take advantage of the newest features of the JS language.
+
+    This is just for example to show how babel work
+
+     ==> npm init --yes
+
+     ==> npm install babel-cli@6.26.0 babel-core@6.26.0 babel-preset-env@1.6.1 --save-dev
+
+     ==> Create build folder
+
+     ==> In scripts:  "babel": "babel --presets env index.js -o build/index.js"
+
+     ==> npm run babel
+
+   Note: It will create new js file in build folder with ES-5 syntax, We mensioned index.js file in script to run, But if we have more files to run we need to add more files. Solution for this is we have to use Webpack it will take all files at a time and convert into ES-5 them make these files into bundle. Before creating bundle, each file will be taken by babel to convert into ES-5. After completion of conversion, all files will be bundled by webpack. 
+
+2) Webpack
+   -------
+ 
+   => Webpack is an open-source JavaScript module bundler. It is a build tool that is primarily used for bundling assets of a web application, such as JavaScript files, CSS stylesheets, and images. Webpack takes various modules and their dependencies and bundles them into a single or multiple output files, typically optimized for deployment in a web browser.
+
+   => Webpack can also optimize code and assets for production, reducing the file size of 
+      the application and improving performance.
+ 
+   Note: Webapack runs our code through babel and it converted to ES-5.
+
+   ==> Finally make changes in index.html: 
+ 
+       - remove type="module" in script tag and 
+       - change src path, serve the "dist/main.bundle.js"
+       - In scripts:  "build": "webpack -w" This is for automatic build for every changes made.
+       - run everytime to build:  num run build  
+
+
+
+
+16) ES-6 Destruturing
+=====================
+
+- The destructuring is a JavaScript expression that makes it possible to unpack values from arrays or unpack properties from objects, into individual variables.
+
+1) Objects
+
+2) Arrays
+
+
+
+17) Browser APIs (Timer functions)
+==================================
+
+
+1) setTimeout
+-------------
+
+   setTimeout(function, milliseconds)
+
+   Executes a function, after waiting a specified number of milliseconds.
+
+2) setInterval
+--------------
+
+   setInterval(function, milliseconds)
+
+   Same as setTimeout(), but repeats the execution of the function continuously.
+
+3) clearTimeout
+---------------
+
+   The clearTimeout() method clears a timer set with the setTimeout() method.
+
+   var myTimeout = setTimeout(function, milliseconds);
+
+   clearTimeout(myTimeout);
+
+4) clearInterval
+----------------
+
+   The clearInterval() method clears a timer set with the setInterval() method.
+
+   let myVar = setInterval(function, milliseconds);
+
+   clearInterval(myVar);
+
+
+
+18) Miscellaneous topics (related to functions)
+========================
+
+
+1) IIFE (Immediately Invocable Function Expression) (ES-5)
+-------
+
+    =>An IIFE is a way to excute functions immediately as soon as they are created.
+    =>The most usecase of an IIFE is to restrict the scope of variables to local so that they don't pollute the global context(scope).
+    =>It helps in making our variables and methods private.
+    =>Any function or variable defined inside IIFE can not be accessed outside of
+      the IIFE block, thus preventing global scope from getting polluted.
+    =>It's often used to create private variables and functions.
+ 
+2) Function currying?
+--------------------
+
+  =>Function currying is a technique of trasforming (converting) a function with 
+    multiple parameters into multiple functions with single parameter.
+  =>It helps to avoid passing same value again and again.
+
+
+3) first class function?
+------------------------
+
+  =>A programming language is said to have First-class functions when functions in that language are treated like any other variable. 
+  =>For example, in such language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable.
+
+
+4) heigher order function?
+--------------------------
+  
+  =>A function that receives another function as an argument or that returns a new function or both is called Higher-order function. Higher-order functions are only possible because of the First-class functions.
+
+
+5) pure function? 
+-----------------
+
+   =>Pure function always returns the same result if the same arguments are passed in. 
+   =>It does not depend on any state, or data, change during a program's execution. It must only depend on its input arguments. 
+   =>They do not have any side effects like network or database calls and do not modify the arguments which are passed to them.
+   =>We can predict the output from pure function.
+
+   
+6) impure function?
+-------------------
+
+  =>Any function that changes the internal state of one of its arguments or the value of some external variable is an impure function. 
+  =>They may have any side effects like network or database calls and it may modify the arguments which are passed to them.
+  =>We can not predict output from impure function.
+
+
+7) Recursion function:
+---------------------
+
+ - A function that calls itself is recursion. Recursion in JavaScript is a recursive call of the function to itself, where the function calls itself, again and again, (recursively) until given condition becomes false.
+
+calculate factorial:
+
+function factorial(n) {
+  if (n <= 0) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
+}
+
+let result = factorial(5);
+console.log(result);
+
+
+
+19) Types of errors in javascript
+    =============================
+
+
+1) Syntax error: 
+   ------------
+
+The error occurs when you use a predefined syntax incorrectly.
+
+ex :
+
+var obj = {
+  name = 'hari'
+}
+
+2) Reference error:
+   ---------------
+
+A ReferenceError occurs when you try to access a variable that doesn't exist in memory.
+
+ex:
+
+console.log(x);
+
+
+3) Type error:
+   ----------
+
+A TypeError occurs when the variable exists, but the operation you're trying to perform on it is not appropriate for the type of value it contains.
+
+ex :
+
+var x = 100;
+x.push(10);
+
+
+
+
+20) Errors handling in JavaScript:
+=================================
+ 
+ - Handling errors in JavaScript is essential to ensure your code is clean and provides a good user experience. JavaScript provides several mechanisms to handle errors effectively. Here are some common methods:
+
+   Using try...catch:
+
+ - The try...catch block allows you to handle exceptions (errors) that occur within a specific block of code. You can place the code that might throw an error inside the try block, and if an error occurs, it will be caught and processed in the catch block.
+
+  try => try statement lets you test a block of code for error.
+
+  catch => catch statement lets you handle the error.
+
+  throw => throw statement lets you create custom errors.
+
+  try{
+
+    code to be tested for error
+  }
+  catch(error){
+
+    error handling
+  } 
+
+
+
+
+
+
 
 
 
