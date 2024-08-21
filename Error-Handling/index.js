@@ -23,3 +23,30 @@
 
 // data.join()
 // console.log(data.split())
+
+// try {
+//   console.log('hi');
+//   console.log('bye');
+// } catch {
+//   console.log('error occured ')
+//   console.log('kohli')
+// }
+// console.log('hello');
+
+
+var age = 15
+
+console.log('hi')
+
+try {
+  if (age < 18) {
+    throw 'age must be >=18';
+  } else {
+    console.log('age', age);
+  }
+  
+} catch (error) {
+  console.log('error happened')
+} 
+
+console.log('bye')
