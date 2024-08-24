@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Hello doc</h1>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum repudiandae molestiae et impedit vel voluptates est vitae a at, nam maxime ex ipsa ullam quos amet quasi consequatur hic. Laudantium doloribus odit rem, praesentium quibusdam optio deleniti. Voluptate et necessitatibus ducimus modi, laudantium, veniam nesciunt iusto ratione praesentium eligendi est? Maiores error, natus ipsam molestiae iure accusamus deserunt expedita eius quas nihil neque saepe sapiente officiis soluta illum qui corrupti enim accusantium mollitia nulla consequuntur vel dolorem. Quos mollitia molestias quisquam at ab quia odio tempora! Ad magnam corrupti ipsa! Tenetur, aperiam! Aperiam ducimus similique necessitatibus, id explicabo excepturi quo!</p>
+
+  <button id="back">go back to previous url</button>
+  <button id="go">go to specific url</button>
+ <script>
+  var goBack = document.getElementById('back')
+
+  var goBackFun = () => {
+    window.history.back()
+  }
+  goBack.addEventListener('click', goBackFun)
+
+  var goBtn = document.getElementById('go')
+
+    var goFun = () => {
+      window.history.go(0);
+    }
+    goBtn.addEventListener('click', goFun)
+ </script>
+</body>
+</html>
